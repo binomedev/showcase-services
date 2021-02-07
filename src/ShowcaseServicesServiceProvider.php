@@ -40,10 +40,5 @@ class ShowcaseServicesServiceProvider extends PackageServiceProvider
     public function packageBooted()
     {
         Blade::componentNamespace('Binomedev\\ShowcaseServices\\View\\Components', $this->package->shortName());
-
-        /*$this->loadViewComponentsAs($this->package->shortName(), [
-            Card::class,
-            ListSection::class,
-        ]);*/
     }
 }

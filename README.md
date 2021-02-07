@@ -30,14 +30,31 @@ This is the contents of the published config file:
 
 ```php
 return [
+    // How services will be stored and retrieved
+    'provider' => 'database', // database, array
+
+    /**
+     * This is used only if the provider is set to array.
+     */
+    'services' => [
+        [
+            'name' => '', // string
+            'slug' => '', // string, unique
+            'icon' => '', // string, nullable
+            'summary' => '', // string
+            'content' => '', // string
+            'tags' => '', // Nullable, string
+            'meta' => [], // array, nullable
+        ]
+    ],
 ];
 ```
 
 ## Usage
 
 ```php
-$showcase-services = new Binomedev\ShowcaseServices();
-echo $showcase-services->echoPhrase('Hello, Binomedev!');
+$showcaseServices = app(Binomedev\ShowcaseServices\ShowcaseServices::class);
+echo $showcaseServices->services();
 ```
 
 ## Testing
