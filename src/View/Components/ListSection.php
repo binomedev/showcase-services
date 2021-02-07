@@ -7,7 +7,6 @@ use Illuminate\View\Component;
 
 class ListSection extends Component
 {
-
     public $title;
 
     /**
@@ -18,7 +17,6 @@ class ListSection extends Component
     {
         $this->title = $title;
     }
-
 
     public function render()
     {

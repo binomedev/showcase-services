@@ -21,7 +21,6 @@ class Card extends Component
         $this->service = $service;
     }
 
-
     public function render()
     {
         return view('showcase-services::components.service');
