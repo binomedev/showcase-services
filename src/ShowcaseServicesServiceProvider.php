@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-
 class ShowcaseServicesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void

@@ -10,6 +10,4 @@ class ShowcaseServices
     {
         $this->config = $config;
     }
-
-
 }
