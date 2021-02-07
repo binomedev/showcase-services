@@ -32,8 +32,8 @@ class ShowcaseServices
     public function findServiceBySlug($slug)
     {
         // FIXME: This should use Repository pattern
-        if($this->usesArrayProvider()){
-            return $this->getArrayServices()->first(function($service) use($slug){
+        if ($this->usesArrayProvider()) {
+            return $this->getArrayServices()->first(function ($service) use ($slug) {
                 return $service->slug === $slug;
             });
         }
@@ -55,6 +55,4 @@ class ShowcaseServices
     {
         return Service::query()->get();
     }
-
-
 }
