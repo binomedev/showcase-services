@@ -2,9 +2,9 @@
 
 namespace Binomedev\ShowcaseServices;
 
+use Binomedev\ShowcaseServices\Commands\ShowcaseServicesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Binomedev\ShowcaseServices\Commands\ShowcaseServicesCommand;
 
 class ShowcaseServicesServiceProvider extends PackageServiceProvider
 {

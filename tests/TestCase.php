@@ -2,9 +2,9 @@
 
 namespace Binomedev\ShowcaseServices\Tests;
 
+use Binomedev\ShowcaseServices\ShowcaseServicesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Binomedev\ShowcaseServices\ShowcaseServicesServiceProvider;
 
 class TestCase extends Orchestra
 {
