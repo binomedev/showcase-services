@@ -11,6 +11,6 @@ class ShowcaseServicesFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'showcase-services';
+        return ShowcaseServices::class;
     }
 }

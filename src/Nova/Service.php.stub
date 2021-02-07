@@ -1,0 +1,101 @@
+<?php
+
+namespace Binomedev\ShowcaseServices\Nova;
+
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\KeyValue;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
+use Whitecube\NovaFlexibleContent\Flexible;
+
+class Service extends Resource
+{
+    /**
+     * The model the resource corresponds to.
+     *
+     * @var string
+     */
+    public static $model = \Binomedev\ShowcaseServices\Models\Service::class;
+
+    /**
+     * The single value that should be used to represent the resource when being displayed.
+     *
+     * @var string
+     */
+    public static $title = 'name';
+
+    /**
+     * The columns that should be searched.
+     *
+     * @var array
+     */
+    public static $search = [
+        'id', 'name', 'content', 'summary', 'tags'
+    ];
+
+    /**
+     * Get the fields displayed by the resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function fields(Request $request)
+    {
+        return [
+            ID::make()->sortable(),
+            Text::make('Name')->required(),
+            Textarea::make('Summary')->rows(2)->required()->rules('max:500'),
+            Textarea::make('Content')->rows(15)->nullable()->stacked(),
+            Textarea::make('Icon')->nullable(),
+            Text::make('Tags')->nullable(),
+            KeyValue::make('Meta')->rules('json')->stacked(),
+        ];
+    }
+
+    /**
+     * Get the cards available for the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function cards(Request $request)
+    {
+        return [];
+    }
+
+    /**
+     * Get the filters available for the resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function filters(Request $request)
+    {
+        return [];
+    }
+
+    /**
+     * Get the lenses available for the resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function lenses(Request $request)
+    {
+        return [];
+    }
+
+    /**
+     * Get the actions available for the resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function actions(Request $request)
+    {
+        return [];
+    }
+}

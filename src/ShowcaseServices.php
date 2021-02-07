@@ -4,8 +4,12 @@ namespace Binomedev\ShowcaseServices;
 
 class ShowcaseServices
 {
-    public function sayHello()
+    protected $config = [];
+
+    public function __construct($config)
     {
-        dd('Hello');
+        $this->config = $config;
     }
+
+
 }
