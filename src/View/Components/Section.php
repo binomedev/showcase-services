@@ -5,7 +5,7 @@ namespace Binomedev\ShowcaseServices\View\Components;
 use Binomedev\ShowcaseServices\Models\Service;
 use Illuminate\View\Component;
 
-class ListSection extends Component
+class Section extends Component
 {
     public $title;
 
@@ -22,6 +22,6 @@ class ListSection extends Component
     {
         $services = Service::query()->get();
 
-        return view('showcase-services::components.services', compact('services'));
+        return view('showcase-services::components.section', compact('services'));
     }
 }

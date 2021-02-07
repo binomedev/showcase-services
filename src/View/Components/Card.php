@@ -23,6 +23,6 @@ class Card extends Component
 
     public function render()
     {
-        return view('showcase-services::components.service');
+        return view('showcase-services::components.card');
     }
 }
