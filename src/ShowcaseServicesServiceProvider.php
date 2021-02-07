@@ -3,8 +3,6 @@
 namespace Binomedev\ShowcaseServices;
 
 use Binomedev\ShowcaseServices\Commands\ShowcaseServicesCommand;
-use Binomedev\ShowcaseServices\View\Components\Card;
-use Binomedev\ShowcaseServices\View\Components\Section;
 use Illuminate\Support\Facades\Blade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
