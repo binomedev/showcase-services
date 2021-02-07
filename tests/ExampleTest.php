@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Binomedev\ShowcaseServices\Tests;
 
 class ExampleTest extends TestCase
 {
