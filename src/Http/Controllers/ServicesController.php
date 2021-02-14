@@ -1,5 +1,6 @@
 <?php
 
+namespace Binomedev\ShowcaseServices\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Artesaos\SEOTools\Traits\SEOTools;
