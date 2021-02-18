@@ -6,7 +6,7 @@ use Binomedev\ShowcaseServices\Models\Service;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
-class ModelFactory extends Factory
+class ServiceFactory extends Factory
 {
     protected $model = Service::class;
 

@@ -9,8 +9,9 @@ use Spatie\Sluggable\SlugOptions;
 
 class Service extends Model
 {
-    use HasSlug;
-    use HasFactory;
+    use HasSlug, HasFactory;
+
+
 
     protected $fillable = [
         'name',
