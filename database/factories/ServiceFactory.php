@@ -2,7 +2,7 @@
 
 namespace Binomedev\ShowcaseServices\Database\Factories;
 
-use Binomedev\ShowcaseServices\Service;
+use Binomedev\ShowcaseServices\Models\Service;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
