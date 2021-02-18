@@ -4,7 +4,7 @@ namespace Binomedev\ShowcaseServices\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Artesaos\SEOTools\Traits\SEOTools;
-use Binomedev\ShowcaseServices\Service;
+use Binomedev\ShowcaseServices\Models\Service;
 
 class ServicesController extends Controller
 {
