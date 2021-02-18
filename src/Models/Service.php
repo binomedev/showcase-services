@@ -13,8 +13,6 @@ class Service extends Model
     use HasSlug;
     use HasFactory;
 
-
-
     protected static function newFactory()
     {
         return new ServiceFactory();
