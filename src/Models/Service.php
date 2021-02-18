@@ -2,6 +2,7 @@
 
 namespace Binomedev\ShowcaseServices\Models;
 
+use Binomedev\ShowcaseServices\Database\Factories\ServiceFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
@@ -12,6 +13,11 @@ class Service extends Model
     use HasSlug, HasFactory;
 
 
+
+    protected static function newFactory()
+    {
+        return new ServiceFactory();
+    }
 
     protected $fillable = [
         'name',
