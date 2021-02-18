@@ -9,7 +9,8 @@ use Spatie\Sluggable\SlugOptions;
 
 class Service extends Model
 {
-    use HasSlug, HasFactory;
+    use HasSlug;
+    use HasFactory;
 
 
 
