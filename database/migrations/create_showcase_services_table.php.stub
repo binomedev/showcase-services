@@ -12,7 +12,7 @@ class CreateShowcaseServicesTable extends Migration
               $table->id();
               $table->string('name');
               $table->string('slug')->unique();
-              $table->string('icon')->nullabe();
+              $table->string('icon')->nullable();
               $table->string('summary', 500);
               $table->text('content')->nullable();
               $table->string('tags')->nullable();
