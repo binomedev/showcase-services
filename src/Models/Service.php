@@ -12,6 +12,7 @@ use Spatie\Sluggable\SlugOptions;
  * Class Service
  * @package Binomedev\ShowcaseServices\Models
  * @property string $name
+ * @property string $slug
  * @property string $icon
  * @property string $summary
  * @property string $content
