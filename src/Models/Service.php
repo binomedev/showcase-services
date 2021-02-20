@@ -29,6 +29,7 @@ class Service extends Model
     protected $fillable = [
         'name',
         'icon',
+        'image',
         'summary',
         'content',
         'meta',
@@ -42,6 +43,8 @@ class Service extends Model
     {
         return new ServiceFactory();
     }
+
+
 
     public function getTagsListAttribute()
     {

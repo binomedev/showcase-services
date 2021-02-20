@@ -2,13 +2,16 @@
 
 namespace Binomedev\ShowcaseServices;
 
+use Binomedev\Nova\Service;
 use Binomedev\ShowcaseServices\Commands\ShowcaseServicesCommand;
 use Illuminate\Support\Facades\Blade;
+use Laravel\Nova\Nova;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ShowcaseServicesServiceProvider extends PackageServiceProvider
 {
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -22,8 +25,7 @@ class ShowcaseServicesServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasRoute('web')
             ->hasMigration('create_showcase_services_table')
-            ->hasTranslations()
-            ->hasCommand(ShowcaseServicesCommand::class);
+            ->hasTranslations();
     }
 
     public function packageRegistered()
@@ -38,5 +40,9 @@ class ShowcaseServicesServiceProvider extends PackageServiceProvider
     public function packageBooted()
     {
         Blade::componentNamespace('Binomedev\\ShowcaseServices\\View\\Components', $this->package->shortName());
+
+        Nova::resources([
+           \Binomedev\ShowcaseServices\Nova\Service::class,
+        ]);
     }
 }

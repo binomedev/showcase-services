@@ -14,11 +14,9 @@ class ServiceFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-            'icon' => null,
             'summary' => $this->faker->paragraph,
             'content' => $this->faker->paragraphs(3, true),
             'tags' => $this->makeTags(),
-            'meta' => [],
         ];
     }
 
