@@ -2,8 +2,6 @@
 
 namespace Binomedev\ShowcaseServices;
 
-use Binomedev\Nova\Service;
-use Binomedev\ShowcaseServices\Commands\ShowcaseServicesCommand;
 use Illuminate\Support\Facades\Blade;
 use Laravel\Nova\Nova;
 use Spatie\LaravelPackageTools\Package;
@@ -11,7 +9,6 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ShowcaseServicesServiceProvider extends PackageServiceProvider
 {
-
     public function configurePackage(Package $package): void
     {
         /*

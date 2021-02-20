@@ -44,8 +44,6 @@ class Service extends Model
         return new ServiceFactory();
     }
 
-
-
     public function getTagsListAttribute()
     {
         return collect(
