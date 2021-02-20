@@ -52,6 +52,7 @@ class Service extends Model
         });
     }
 
+
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
