@@ -21,11 +21,8 @@ class ServicesController extends Controller
         return view('showcase-services::index', compact('services'));
     }
 
-    public function show($service)
+    public function show(Service $service)
     {
-        // FIXME: Tried to have model binding but it won't fetch the model. Don't know why, yet.
-        $service = Service::query()->whereSlug($service)->firstOrFail();
-
         $this->seo()->setTitle($service->name);
         $this->seo()->setDescription($service->summary);
         $this->seo()->metatags()->setKeywords($service->tags);
