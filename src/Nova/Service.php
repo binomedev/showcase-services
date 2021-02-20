@@ -36,7 +36,7 @@ class Service extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'content', 'summary'
+        'id', 'name', 'content', 'summary',
     ];
 
     /**
